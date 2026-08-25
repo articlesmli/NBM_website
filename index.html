@@ -44,21 +44,12 @@
             margin: 0 auto;
         }
 
-        /* Restored original working logo text style */
-        .logo-placeholder {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
+        .logo-container img {
+            height: 40px;
+            display: block;
         }
 
-        .logo-text-blue { color: var(--primary); }
-        .logo-text-green { color: var(--secondary); }
-
-        /* Contact icon button style (email address text hidden) */
+        /* Contact icon button style (email text removed, icon only) */
         .contact-icon-btn {
             display: flex;
             align-items: center;
@@ -244,8 +235,8 @@
 
     <header>
         <div class="nav-container">
-            <div class="logo-placeholder">
-                <span class="logo-text-blue">Nano</span><span class="logo-text-green">BioMatrix</span>
+            <div class="logo-container">
+                <img src="logo.png" alt="NanoBioMatrix Logo">
             </div>
             <a href="mailto:mariya.ivanova@nanobiomatrix.uk" class="contact-icon-btn" title="Contact Us">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
