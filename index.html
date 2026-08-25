@@ -44,18 +44,23 @@
             margin: 0 auto;
         }
 
-        .logo-placeholder {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .logo-container img {
+            height: 40px;
+            display: block;
         }
 
-        /* Feel free to replace this styled text logo with your actual image later */
-        .logo-text-blue { color: var(--primary); }
-        .logo-text-green { color: var(--secondary); }
+        .contact-email {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .contact-email:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
 
         .hero {
             background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
@@ -176,7 +181,7 @@
 
         .spec-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -210,6 +215,7 @@
             .hero h1 { font-size: 2.25rem; }
             .hero p { font-size: 1.1rem; }
             .container { padding: 3rem 5%; }
+            .nav-container { flex-direction: column; gap: 1rem; }
         }
     </style>
 </head>
@@ -217,9 +223,10 @@
 
     <header>
         <div class="nav-container">
-            <div class="logo-placeholder">
-                <span class="logo-text-blue">Nano</span><span class="logo-text-green">BioMatrix</span>
+            <div class="logo-container">
+                <img src="logo.png" alt="NanoBioMatrix Logo">
             </div>
+            <a href="mailto:mariya.ivanova@nanobiomatrix.uk" class="contact-email">mariya.ivanova@nanobiomatrix.uk</a>
         </div>
     </header>
 
@@ -274,10 +281,6 @@
                 <div class="spec-item">
                     <h4>Quantum Security</h4>
                     <p>Integrated <strong>Post-Quantum Cryptography (PQC)</strong> safeguarding critical data in-transit indefinitely.</p>
-                </div>
-                <div class="spec-item">
-                    <h4>Empirical Velocity</h4>
-                    <p>Engineered and validated locally against a baseline dataset of 144,233 samples at <strong>25,000 events/second</strong>.</p>
                 </div>
             </div>
         </section>
