@@ -6,8 +6,8 @@
     <title>NanoBioMatrix | High-Performance Biocomputing & Enterprise Architecture</title>
     <style>
         :root {
-            --primary: #1e5c78; /* Deep blue extracted from the logo */
-            --secondary: #6cb33f; /* Vibrant green extracted from the logo */
+            --primary: #1e5c78; /* Deep blue from the logo */
+            --secondary: #6cb33f; /* Vibrant green from the logo */
             --dark: #123447;
             --light: #f4f8fa;
             --white: #ffffff;
@@ -44,22 +44,43 @@
             margin: 0 auto;
         }
 
-        .logo-container img {
-            height: 40px;
-            display: block;
-        }
-
-        .contact-email {
+        /* Restored original working logo text style */
+        .logo-placeholder {
+            font-size: 1.5rem;
+            font-weight: 700;
             color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: color 0.2s ease;
         }
 
-        .contact-email:hover {
-            color: var(--secondary);
-            text-decoration: underline;
+        .logo-text-blue { color: var(--primary); }
+        .logo-text-green { color: var(--secondary); }
+
+        /* Contact icon button style (email address text hidden) */
+        .contact-icon-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(30, 92, 120, 0.1);
+            color: var(--primary);
+            border-radius: 50%;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .contact-icon-btn:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .contact-icon-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
         }
 
         .hero {
@@ -223,10 +244,14 @@
 
     <header>
         <div class="nav-container">
-            <div class="logo-container">
-                <img src="logo.png" alt="NanoBioMatrix Logo">
+            <div class="logo-placeholder">
+                <span class="logo-text-blue">Nano</span><span class="logo-text-green">BioMatrix</span>
             </div>
-            <a href="mailto:mariya.ivanova@nanobiomatrix.uk" class="contact-email">mariya.ivanova@nanobiomatrix.uk</a>
+            <a href="mailto:mariya.ivanova@nanobiomatrix.uk" class="contact-icon-btn" title="Contact Us">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+            </a>
         </div>
     </header>
 
