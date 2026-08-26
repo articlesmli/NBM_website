@@ -76,9 +76,10 @@
             fill: currentColor;
         }
 
+        /* Updated hero gradient to transition from dark blue/teal at top-left to white at bottom-right */
         .hero {
-            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
-            color: var(--white);
+            background: linear-gradient(135deg, var(--dark) 0%, var(--white) 100%);
+            color: var(--dark);
             padding: 5rem 5% 6rem;
             text-align: center;
         }
@@ -91,31 +92,23 @@
         .hero h1 {
             font-size: 3rem;
             line-height: 1.2;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             font-weight: 800;
+            color: var(--dark);
         }
 
-        /* This creates the distinct blue panel/box behind the text with a strong shadow */
-        .hero-sub-box {
-            background-color: rgba(9, 34, 48, 0.75);
-            border: 1px solid rgba(82, 161, 53, 0.3);
-            border-radius: 12px;
-            padding: 2rem;
-            max-width: 650px;
-            margin: 0 auto;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(5px);
-        }
-
+        /* Removed the redundant box, clean text layout with strong contrast */
         .hero-sub {
             font-size: 1.25rem;
+            max-width: 700px;
+            margin: 1.2rem auto 0;
             line-height: 1.6;
         }
 
         .hero-sub span {
             display: block;
-            margin: 8px 0;
-            color: var(--white);
+            margin: 6px 0;
+            color: var(--primary);
             font-weight: 600;
         }
 
@@ -255,15 +248,11 @@
     <section class="hero">
         <div class="hero-container">
             <h1>Architecting next-generation computational solutions for highly regulated ecosystems</h1>
-            
-            <!-- Wrapped in a distinct blue/teal panel box with a shadow -->
-            <div class="hero-sub-box">
-                <p class="hero-sub">
-                    <span>Solving Real-World Complexity</span>
-                    <span>Accelerating Compute</span>
-                    <span>Securing Privacy</span>
-                </p>
-            </div>
+            <p class="hero-sub">
+                <span>Solving Real-World Complexity</span>
+                <span>Accelerating Compute</span>
+                <span>Securing Privacy</span>
+            </p>
         </div>
     </section>
 
