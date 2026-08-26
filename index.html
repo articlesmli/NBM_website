@@ -76,10 +76,10 @@
             fill: currentColor;
         }
 
-        /* Updated hero gradient to transition from dark blue/teal at top-left to white at bottom-right */
+        /* Restored the diagonal gradient transitioning from dark blue/navy (#092230) at top-left to light blue/teal (#174c63) at bottom-right, with white text */
         .hero {
-            background: linear-gradient(135deg, var(--dark) 0%, var(--white) 100%);
-            color: var(--dark);
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: var(--white);
             padding: 5rem 5% 6rem;
             text-align: center;
         }
@@ -94,10 +94,9 @@
             line-height: 1.2;
             margin-bottom: 1.5rem;
             font-weight: 800;
-            color: var(--dark);
+            color: var(--white);
         }
 
-        /* Removed the redundant box, clean text layout with strong contrast */
         .hero-sub {
             font-size: 1.25rem;
             max-width: 700px;
@@ -108,7 +107,7 @@
         .hero-sub span {
             display: block;
             margin: 6px 0;
-            color: var(--primary);
+            color: var(--white);
             font-weight: 600;
         }
 
