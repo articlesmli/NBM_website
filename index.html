@@ -95,7 +95,7 @@
             font-weight: 800;
         }
 
-        /* Stacked layout style with email-icon green text and removed bullets */
+        /* Stacked layout style with white text, font-weight 600, and a stronger shadow/glow to pop against the dark background */
         .hero-sub {
             font-size: 1.25rem;
             max-width: 700px;
@@ -106,8 +106,9 @@
         .hero-sub span {
             display: block;
             margin: 6px 0;
-            color: var(--secondary);
+            color: var(--white);
             font-weight: 600;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
         }
 
         .container {
@@ -145,14 +146,15 @@
             background-color: var(--white);
             padding: 2.5rem;
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            /* Enhanced box-shadow for the first panel/cards to look more distinguished */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
             border-top: 5px solid var(--primary);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .card.alt {
