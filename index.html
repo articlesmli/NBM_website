@@ -91,16 +91,24 @@
         .hero h1 {
             font-size: 3rem;
             line-height: 1.2;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             font-weight: 800;
-            text-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
         }
 
-        /* Further increased text-shadow and layered glow to make the shadow pop out much more distinctly against the dark background */
+        /* This creates the distinct blue panel/box behind the text with a strong shadow */
+        .hero-sub-box {
+            background-color: rgba(9, 34, 48, 0.75);
+            border: 1px solid rgba(82, 161, 53, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 650px;
+            margin: 0 auto;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
         .hero-sub {
             font-size: 1.25rem;
-            max-width: 700px;
-            margin: 1.2rem auto 0;
             line-height: 1.6;
         }
 
@@ -109,7 +117,6 @@
             margin: 8px 0;
             color: var(--white);
             font-weight: 600;
-            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9), 0 0 25px rgba(0, 0, 0, 0.7), 0 0 5px rgba(0, 0, 0, 0.5);
         }
 
         .container {
@@ -248,11 +255,15 @@
     <section class="hero">
         <div class="hero-container">
             <h1>Architecting next-generation computational solutions for highly regulated ecosystems</h1>
-            <p class="hero-sub">
-                <span>Solving Real-World Complexity</span>
-                <span>Accelerating Compute</span>
-                <span>Securing Privacy</span>
-            </p>
+            
+            <!-- Wrapped in a distinct blue/teal panel box with a shadow -->
+            <div class="hero-sub-box">
+                <p class="hero-sub">
+                    <span>Solving Real-World Complexity</span>
+                    <span>Accelerating Compute</span>
+                    <span>Securing Privacy</span>
+                </p>
+            </div>
         </div>
     </section>
 
